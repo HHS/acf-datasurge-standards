@@ -1,5 +1,7 @@
 # R Style Guidelines
-The ACF Data Surge team's R Style Guidelines are intended to make our R code consistent and easy to read across projects. Text and examples in our guidelines borrow heavily from the [Tidyverse convention](https://style.tidyverse.org/syntax.html). We adopt the [Google R Style Guide] approach of listing the ways that our guidelines differ from the Tidyverse guidelines. We also include a section at the end with our preferred packages.
+The ACF Data Surge team's R Style Guidelines are intended to make our R code consistent and easy to read across projects. Our guidelines align with the [The tidyverse style guide](https://style.tidyverse.org/) and we adopt the [Google R Style Guide](https://google.github.io/styleguide/Rguide.html) approach of listing the ways that our guidelines differ from the tidyverse guidelines. 
+
+Our guidelines are unique in that we include a section at the end detailing preferred packages and package management standards.
 
 ## Functions
 

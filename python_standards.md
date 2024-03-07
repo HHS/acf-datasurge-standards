@@ -8,8 +8,8 @@
     + [Naming conventions](#naming-conventions)
     + [Global variables and namespaces](#global-variables-and-namespaces)
   * [Documentation](#documentation)
+    + [Docstrings](#docstrings)
 - [Packages](#packages)
-- [Accessibility](#accessibility)
 
 ## Style Considerations
 Much of these considerations are adapted from the [PEP 8  Style Guide for Python](https://peps.python.org/pep-0008/])
@@ -132,6 +132,29 @@ y = changeGlobal(2)         # y = 11356
 print(GLOBALVAR)            # prints 5678
 ```
 ### Documentation
+#### Docstrings
+For more info on docstring best practices, see [PEP 257](https://peps.python.org/pep-0257/).
+
+A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the ```__doc__``` special attribute of that object.
+
+All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. Public methods (including the ```__init__``` constructor) should also have docstrings. A package may be documented in the module docstring of the ```__init__.py``` file in the package directory.
+
+For consistency, always use ```"""triple double quotes"""``` around docstrings. Use ```r"""raw triple double quotes"""``` if you use any backslashes in your docstrings. 
+
+#### Comments
+Block comments generally apply to some (or all) code that follows them, and are indented to the same level as that code. Each line of a block comment starts with a # and a single space (unless it is indented text inside the comment).
+
+Paragraphs inside a block comment are separated by a line containing a single #.
+
+Use inline comments sparingly. An inline comment is a comment on the same line as a statement. Inline comments should be separated by at least two spaces from the statement. They should start with a # and a single space.
+
+Inline comments are unnecessary and in fact distracting if they state the obvious. Don’t do this:
+```{python}
+x = x + 1         # Increment x
+```
+But sometimes, this is useful:
+```{python}
+x = x + 1         # Compensate for border
+```
 ## Packages
-## Accessibility
 

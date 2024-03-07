@@ -6,15 +6,8 @@
     + [Using White spaces](#using-white-spaces)
   * [Naming](#naming)
     + [Naming conventions](#naming-conventions)
-  * [Program Composition](#program-composition)
-    + [Comparisons, equalities, and if statements](#comparisons--equalities--and-if-statements)
-    + [Lambda expressions](#lambda-expressions)
     + [Global variables and namespaces](#global-variables-and-namespaces)
-    + [Imports](#imports)
-    + [if __name__ == "__main__"](#if---name---------main---)
-    + [Exceptions](#exceptions)
   * [Documentation](#documentation)
-  * [Efficiency and Performance](#efficiency-and-performance)
 - [Packages](#packages)
 - [Accessibility](#accessibility)
 
@@ -110,11 +103,7 @@ There are many opinions on the best way to name variables in python. We will gen
 - Use lowercase_with_underscores for local variables, member attributes or methods, function arguments and parameters
 - Use PascalCase for classes
 - Use short lowercase names for scripts
-- Never create a variable that has __double_leading_and_trailing_underscore__
 
-### Program Composition
-#### Comparisons, equalities, and if statements
-#### Lambda expressions
 #### Global variables and namespaces
 In Python, variable lookups go up from local namespace to parent namespace to global namespace. Below, python looks in the local namespace of multiply and cannot find GLOBALVAR so it looks in the parent scope
 ```{python}
@@ -142,25 +131,7 @@ print(GLOBALVAR)            # prints 12345
 y = changeGlobal(2)         # y = 11356  
 print(GLOBALVAR)            # prints 5678
 ```
-
-#### Imports
-- Imports should always be at the top of the module. Do not import a module in a class for example, unless absolutely necessary
-- When importing different versions, especially in modules requiring consumption use a try block
-```{python}
-try:  
-    import something  
-except ImportError:  
-    import something_else
-```
-Do NOT use
-```{python}
-from library import *
-```
-because it loads all top level modules of library into the global namespace
-
-#### Exceptions
 ### Documentation
-### Efficiency and Performance
 ## Packages
 ## Accessibility
 

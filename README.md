@@ -8,5 +8,6 @@ This guide covers essential topics such as directory structure, file naming conv
 - [Functional Programming](functional_programming.md)
 - [GitHub](github.md)
 - [Notebooks](notebooks.md)
+- [R Standards](r_standards.md)
 - [Scripts](script.md)
 - [Tools](tooling.md)

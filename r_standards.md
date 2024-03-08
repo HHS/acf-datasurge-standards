@@ -38,14 +38,14 @@ In addition to installing the packages needed for your work, [styler](https://st
 ### Preferred Packages
 
 - Data Cleaning: [tidyverse](https://www.tidyverse.org/), [dplyr](https://dplyr.tidyverse.org/), [tidyr](https://tidyr.tidyverse.org/), [arrow](https://arrow.apache.org/docs/r/), [dtplyr](https://dtplyr.tidyverse.org/), [janitor](https://www.rdocumentation.org/packages/janitor/versions/2.2.0)
-    - Installing the tidyverse will install both dplyr and tidyr, as well as many other useful packages. However, we encourage parsimony. That is, if only a few of the packages in the tidyverse are needed, do not load them all. This helps with reproducibility, making clear what pacakges are needed for a specific script, and with performance. To that end we listed packages in the tidyverse individually throughout this guide.
+    - Installing the tidyverse will install both dplyr and tidyr, as well as many other useful packages. However, we encourage parsimony. That is, if only a few of the packages in the tidyverse are needed, do not load them all. This helps with reproducibility, making clear what packages are needed for a specific script, and with performance. To that end we listed packages in the tidyverse individually throughout this guide.
     - When working with large data, prefer arrow and dtplyr to packages such as data.table. The former provide syntax that is similar to the syntax of dplyr without sacrificing much speed.
 - Assertive Programming: [assertr](https://www.rdocumentation.org/packages/assertr/versions/3.0.1)
     - Use a combination of base R (e.g. `stop()`, `stopifnot()`) and assertr for assertive programming. In pipelines, prefer assertr.
 - Loops: [purrr](https://purrr.tidyverse.org/), [furrr](https://furrr.futureverse.org/)
     - It is acceptable to use the base R `*apply()` suite of functions for looping.
     - Use furrr as a drop-in replacement for purrr if attempting to parallelize code.
-- Quarto: [rmarkdown](https://www.rdocumentation.org/packages/rmarkdown/versions/2.25)
+- [Quarto](https://quarto.org/): [rmarkdown](https://www.rdocumentation.org/packages/rmarkdown/versions/2.25)
 - Reading Data: [readr](https://readr.tidyverse.org/), [readxl](https://readxl.tidyverse.org/), [openxlsx](https://ycphs.github.io/openxlsx/articles/Introduction.html)
     - It is acceptable to use Base R where possible, but we recommend considering readr for its speed and consistent naming conventions.
 - Machine Learning/Statistics: [tidymodels](https://www.tidymodels.org/)

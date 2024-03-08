@@ -157,4 +157,11 @@ But sometimes, this is useful:
 x = x + 1         # Compensate for border
 ```
 ## Packages
+- Data Cleaning and Exploration: [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html), [numpy](https://numpy.org/), [polars](https://pola.rs/)
+  * Polars can be used when parallelization is desired (large dataset manipulation)
+- Machine Learning/Statistics: [scikit-learn](https://scikit-learn.org/stable/), [pytorch](https://pytorch.org/)/[tensorflow](https://www.tensorflow.org/) for deep learning
+- String Manipulation: [regex](https://docs.python.org/3/library/re.html)
+- Visualization: [matplotlib](https://matplotlib.org/), [seaborn](https://seaborn.pydata.org/)
+
+
 

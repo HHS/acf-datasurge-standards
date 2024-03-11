@@ -9,6 +9,7 @@
     + [Global variables and namespaces](#global-variables-and-namespaces)
   * [Documentation](#documentation)
     + [Docstrings](#docstrings)
+  * [Assertive Programming](#assertive-programming)
 - [Packages](#packages)
 
 ## Style Considerations
@@ -98,7 +99,7 @@ def complex(real, imag = 0.0):
 ### Naming
 There are many opinions on the best way to name variables in python. We will generally follow the guidelines in [PEP 8 - Naming Conventions](https://peps.python.org/pep-0008/#naming-conventions)
 #### Naming conventions
-- Variable names should be no less than 3 characters and should be ddscriptive of what the variable represents
+- Variable names should be no less than 3 characters and should be descriptive of what the variable represents
 - Use CAPITALS to define constants or globals that will be used in your entire program or module
 - Use lowercase_with_underscores for local variables, member attributes or methods, function arguments and parameters
 - Use PascalCase for classes
@@ -156,12 +157,21 @@ But sometimes, this is useful:
 ```{python}
 x = x + 1         # Compensate for border
 ```
+### Assertive Programming
+Assertive programming is an important way to sanity check around human error and validate inputs for functions. Assert statements are also useful in indicating to someone else exactly how your code should be used. In the below code block, the assert statement forces the function to ensure a valid input amount (greater than 0) before commencing with the function work. If the assert statement fails (```refund_amount <= 0```), then an assert error will be thrown.
+```{python}
+def refund_client(refund_amount):
+    assert refund_amount > 0, f"refund amound needs to be positive, this is invalid {refund_amount}"
+    now_do_the_actual_work()
+```
 ## Packages
 - Data Cleaning and Exploration: [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html), [numpy](https://numpy.org/), [polars](https://pola.rs/)
   * Polars can be used when parallelization is desired (large dataset manipulation)
+- Geospatial Analyses: [GeoPandas](https://geopandas.org/en/stable/), [Shapely](https://shapely.readthedocs.io/en/stable/manual.html)
 - Machine Learning/Statistics: [scikit-learn](https://scikit-learn.org/stable/), [pytorch](https://pytorch.org/)/[tensorflow](https://www.tensorflow.org/) for deep learning
 - String Manipulation: [regex](https://docs.python.org/3/library/re.html)
 - Visualization: [matplotlib](https://matplotlib.org/), [seaborn](https://seaborn.pydata.org/)
+- Dashboards: [Plotly/Dash](https://dash.plotly.com/) or [Streamlit](https://streamlit.io/) for a lightweight solution. [Flask](https://flask.palletsprojects.com/en/3.0.x/) for a fully customizable option.
 
 
 

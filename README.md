@@ -11,4 +11,6 @@ This guide covers essential topics such as directory structure, file naming conv
 - [Notebooks](notebooks.md)
 - [R Standards](r_standards.md)
 - [Scripts](script.md)
+  * [R-specifc Standards](r_standards.md)
+  * [Python-specific Standards](python_standards.md)
 - [Tools](tooling.md)

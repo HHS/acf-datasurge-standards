@@ -18,7 +18,7 @@ This module should extract the data from its raw source and place the data in th
 ## Initial data validation and exploration
 This module ensures that all of the variables we expect are on the file, that variables have the type we expect (or we are able to convert to the types desired), that we understand what all of the variables mean, and that we have all of the records expected. These items should be verified assertively. In the event that any of these checks fail, an internal review is necessary to ensure that we are able to recover the information needed for analysis in spite of the failure. At this stage, it is also useful to determine if there are any unusual data patterns. If data are not recoverable or unusual patterns are present in the data, inquire about them with the client.
 
-The initial data validation and exploration step is a good use case for notebooks (i.e. Quarto/Jupyter).
+The initial data validation and exploration step is a good use case for [notebooks](notebooks.md) (i.e. Quarto/Jupyter).
 
 ## Data cleaning, transformation, and standardization
 This module executes data cleaning, transformation, and standardization steps. It is common for data to vary on some dimension (e.g., a survey changes slightly every year, or data from different organizations have different structures). The files output from this remove enough of this variation such that they can easily be merged (columns added) or appended (rows added). To ensure all developers are aligned, a set of specifications defining the expected output from data cleaning should be developed and stored in a central location. (This central location could be GitHub, but project leads should take care to omit any files that may contain PII or information which is not public from GitHub.) The specs should minimally include:
@@ -37,7 +37,7 @@ This single module confirms that cleaned files are aligned with the specs. Singl
 
 This module is a good place to insert any additional exploration steps desired before analysis. The module might produce correlations, graphs, and tables which can be checked to ensure that variable values are not only within the ranges expected and of the expected type, but that they make sense contextually.
 
-As with the initial data validation, the post-cleaning validation module is a good use case for notebooks.
+As with the initial data validation, the post-cleaning validation module is a good use case for [notebooks](notebooks.md).
 
 ## Analysis preparation
 Module(s) which create constructs or intermediate data files necessary for the proposed analyses can be developed ad-hoc. If there is only a single analysis or if the set of analyses to be performed is clear from the outset of the project, these modules may be unnecessary. In the event that they are needed, developers should validate the variables or files created by these modules as they would variables created before the post-cleaning validation. 

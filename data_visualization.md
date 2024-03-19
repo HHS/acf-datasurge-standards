@@ -22,7 +22,7 @@ Data visualization is a powerful tool for communicating complex information clea
 
 ### Use Color Effectively
 
--   Utilize established color palettes. ACF has a specific color palette for visuals available through the ACF Digital Toolbox.
+-   Utilize established color palettes. ACF has a specific color palette for visuals available through the [ACF Digital Toolbox](https://www.acf.hhs.gov/digital-toolbox).
 
 -   Avoid using red and green together. This color combination can be problematic for color-blind viewers. Opt for color-blind friendly palettes that ensure your visualizations are accessible to a broader audience.
 

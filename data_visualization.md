@@ -52,7 +52,7 @@ Data visualization is a powerful tool for communicating complex information clea
 
 -   Start axes at zero where appropriate to avoid misleading representations.
 
-### Limit visual distractions
+### Limit Visual Distractions
 
 -   Use clean backgrounds. Opt for simple, uncluttered backgrounds that don't interfere with the readability of the data. Complex textures or images behind data visualizations can make them harder to read and understand.
 
@@ -60,6 +60,6 @@ Data visualization is a powerful tool for communicating complex information clea
 
 -   In interactive dashboards, make sure folks can't accidentally mis-aggregate by disabling drill-downs when not applicable.
 
-### Example style guides
+### Example Style Guides
 
 -   [Spreadsheet linking to dozens of style guides across sectors](https://docs.google.com/spreadsheets/d/1F1gm5QLXh3USC8ZFx_M9TXYxmD-X5JLDD0oJATRTuIE/edit#gid=1679646668)

@@ -4,6 +4,7 @@ This guide covers essential topics such as directory structure, file naming conv
 
 - [Analysis Standards](analysis_standards.md)
 - [Compute Considerations](compute_considerations.md)
+- [Data Visualization](data_visualization.md)
 - [Directories](directories.md)
 - [Documentation](documentation.md)
 - [Functional Programming](functional_programming.md)

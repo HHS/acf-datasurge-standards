@@ -34,7 +34,14 @@ A good folder structure should be hierarchical, modular, and scalable, and avoid
 
 - Separate Files by Functionality: Keep related files together within directories to improve readability and maintainability.
 - Avoid Large Directories: If a directory becomes too large, consider further subdivision or refactoring to improve navigation.
-- Version Control Files: Include version control files like .gitignore and .gitkeep to manage versioning and ignore unnecessary files.
+
+### Version Control Files
+- Include version control files like .gitignore and .gitkeep to manage versioning and ignore unnecessary files.
+- In general, data should be ignored. Data containing PII or other privileged information must be ignored (and may be better suited to storage outside of a directory under git version control).
+- Take care when tracking notebook files, particularly .ipynb files.
+    - These files store rendered output which will be visible on GitHub.
+    - It is best to add .ipynb files to your .gitignore.
+- See [.gitignore example](./resources/gitignore_example.txt) for a sample .gitignore file.
 
 ### Dependency Management
 
@@ -75,7 +82,7 @@ As with repository names, branch names should be descriptive and concise. Use sl
 - JRA-123-\<branch-name>
 
 ## Branch Management
-Work should rarely, if ever, be done on a repository's main branch. For each new task or issue, a new branch should be created. When creating a new branch, the default behavior should be to branch from main. This convention can be foregone if the is good reason, i.e.: 1) The new branch builds on work in an existing branch or 2) the work done in this new branch is experimental and will ultimately be merged into a branch that was branched from main (this is not an exhaustive list of examples). After a branch is fully merged into main, delete it from GitHub. Whether local versions of a branch are kept is up to the programmer, but they should be aware that these local branches are no longer tracking a remote branch.<sup>[5](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)</sup>
+Work should rarely, if ever, be done on a repository's main branch. For each new task or issue, a new branch should be created. When creating a new branch, the default behavior should be to branch from main. This convention can be foregone if there is good reason, i.e.: 1) The new branch builds on work in an existing branch or 2) the work done in this new branch is experimental and will ultimately be merged into a branch that was branched from main (this is not an exhaustive list of examples). After a branch is fully merged into main, delete it from GitHub. Whether local versions of a branch are kept is up to the programmer, but they should be aware that these local branches are no longer tracking a remote branch.<sup>[5](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)</sup>
 
 ![Automatically delete head branches](./images/auto_delete_head.png)
 

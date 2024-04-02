@@ -36,7 +36,7 @@ A good folder structure should be hierarchical, modular, and scalable, and avoid
 - Avoid Large Directories: If a directory becomes too large, consider further subdivision or refactoring to improve navigation.
 
 ### Version Control Files
-- Include version control files like .gitignore and .gitkeep to manage versioning and ignore unnecessary files.
+- Include version control files like .gitignore to manage versioning and ignore unnecessary files.
 - In general, data should be ignored. Data containing PII or other privileged information must be ignored (and may be better suited to storage outside of a directory under git version control).
 - Take care when tracking notebook files, particularly .ipynb files.
     - These files store rendered output which will be visible on GitHub.

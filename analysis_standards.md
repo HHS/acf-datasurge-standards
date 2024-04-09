@@ -10,7 +10,7 @@ The kinds of analyses that the ACF Data Surge Team will engage in can take on a 
 - [Analysis](#analysis)
 - [Output](#outputs)
 
-Throughout this page we refer to a module. In Python, a module is essentially any script with the ".py" extension. These scripts can have function, variable, and class definitions which can be imported into other modules. We adopt this Python definition of a module to apply to any language an analysis project is being conducted in. While the text in a given section may refer to a single module, we anticipate that there will definitions imported from elsewhere that are necessary for this single module to run.
+Throughout this page we refer to a module. In Python, a module is essentially any script with the ".py" extension. These scripts can have function, variable, and class definitions which can be imported into other modules. We adopt this Python definition of a module to apply to any language an analysis project is being conducted in. While the text in a given section may refer to a single module, we anticipate that there will be definitions imported from elsewhere that are necessary for this single module to run.
 
 ## Extract
 This module should extract the data from its raw source and place the data in the input location. If there is no extraction necessary, then make a copy of the raw data and place in the input location. This step prevents corruption of the raw data and lessens the chance that we will have to reach out to our client for a second data delivery due to a mistake on our end.

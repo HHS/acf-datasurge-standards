@@ -79,14 +79,14 @@ It is important to standardize our repository and branch naming conventions acro
 
 ### Repositories
 
-Repository names should be descriptive, but concise. They should avoid including any names or information that is subject to change. Renaming a repository can lead to broken links within the repository itself, or within other repositories that reference it. Separate repository names with dashes, and use only lowercase letters in the name where possible. Examples of good repository names include:`<sup>`[1](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Naming-Repos.md) `</sup>` `<sup>`[2](https://climbtheladder.com/10-github-repository-naming-best-practices/) `</sup>`
+Repository names should be descriptive, but concise. They should avoid including any names or information that is subject to change. Renaming a repository can lead to broken links within the repository itself, or within other repositories that reference it. Separate repository names with dashes, and use only lowercase letters in the name where possible. Examples of good repository names include:<sup>[1](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Naming-Repos.md)</sup> <sup>[2](https://climbtheladder.com/10-github-repository-naming-best-practices/)</sup>
 
 - acf-datasurge-standards
 - arch-brainstorm-session
 
 ### Branches
 
-As with repository names, branch names should be descriptive and concise. Use slashes to separate parts of branch names, and define grouping words to differentiate and sort branches (i.e. fix/, feat/, wip/, bug/, etc.). If Jira and GitHub are integrated, include the Jira issue key in your branch name.`<sup>`[3](https://support.atlassian.com/jira-software-cloud/docs/reference-issues-in-your-development-work/) `</sup>` Do not include leading numbers in branch names. Examples of good branch names include `<sup>`[4](https://stackoverflow.com/questions/273695/what-are-some-examples-of-commonly-used-practices-for-naming-git-branches) `</sup>`:
+As with repository names, branch names should be descriptive and concise. Use slashes to separate parts of branch names, and define grouping words to differentiate and sort branches (i.e. fix/, feat/, wip/, bug/, etc.). If Jira and GitHub are integrated, include the Jira issue key in your branch name.<sup>[3](https://support.atlassian.com/jira-software-cloud/docs/reference-issues-in-your-development-work/) </sup> Do not include leading numbers in branch names. Examples of good branch names include <sup>[4](https://stackoverflow.com/questions/273695/what-are-some-examples-of-commonly-used-practices-for-naming-git-branches) </sup>:
 
 - feat/python-watcher-service
 - fix/pir-ingestion
@@ -94,7 +94,7 @@ As with repository names, branch names should be descriptive and concise. Use sl
 
 ## Branch Management
 
-Work should rarely, if ever, be done on a repository's main branch. For each new task or issue, a new branch should be created. When creating a new branch, the default behavior should be to branch from main. This convention can be foregone if there is good reason, i.e.: 1) The new branch builds on work in an existing branch or 2) the work done in this new branch is experimental and will ultimately be merged into a branch that was branched from main (this is not an exhaustive list of examples). After a branch is fully merged into main, delete it from GitHub. Whether local versions of a branch are kept is up to the programmer, but they should be aware that these local branches are no longer tracking a remote branch.`<sup>`[5](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) `</sup>`
+Work should rarely, if ever, be done on a repository's main branch. For each new task or issue, a new branch should be created. When creating a new branch, the default behavior should be to branch from main. This convention can be foregone if there is good reason, i.e.: 1) The new branch builds on work in an existing branch or 2) the work done in this new branch is experimental and will ultimately be merged into a branch that was branched from main (this is not an exhaustive list of examples). After a branch is fully merged into main, delete it from GitHub. Whether local versions of a branch are kept is up to the programmer, but they should be aware that these local branches are no longer tracking a remote branch.<sup>[5](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) </sup>
 
 ![Automatically delete head branches](./images/auto_delete_head.png)
 
@@ -110,4 +110,4 @@ A pull request should be reviewed by at least one team member before it is merge
 
 Commit frequently. There is little or no downside to making commits and regularly committing can help retrieve work more easily. After completing a feature or module consider making a commit.
 
-Strong commit messages will also make retrieving work and understanding a repository easier. A commit message should consist of two parts: 1) A subject line (limited to 72 characters on GitHub) and 2) a descriptive body outlining what was done in the commit.`<sup>`[6](https://www.theodinproject.com/lessons/foundations-commit-messages) `</sup>` `<sup>`[7](https://cbea.ms/git-commit/) `</sup>` If Jira and GitHub are integrated and the commit is related to a Jira issue, include the Jira issue key in the body of the commit message.`<sup>`[8](https://support.atlassian.com/jira-software-cloud/docs/reference-issues-in-your-development-work/) `</sup>`
+Strong commit messages will also make retrieving work and understanding a repository easier. A commit message should consist of two parts: 1) A subject line (limited to 72 characters on GitHub) and 2) a descriptive body outlining what was done in the commit.<sup>[6](https://www.theodinproject.com/lessons/foundations-commit-messages) </sup> <sup>[7](https://cbea.ms/git-commit/) </sup> If Jira and GitHub are integrated and the commit is related to a Jira issue, include the Jira issue key in the body of the commit message.<sup>[8](https://support.atlassian.com/jira-software-cloud/docs/reference-issues-in-your-development-work/) </sup>

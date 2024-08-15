@@ -2,7 +2,7 @@
 
 ## Template Repository
 
-We have a team  template https://github.com/HHS/acf-datasurge-project-template. Use it as a starting point for each project's repository. 
+We have a team template https://github.com/HHS/acf-datasurge-project-template. Use it as a starting point for each project's repository. 
 
 ## Repository Documentation
 

@@ -1,5 +1,9 @@
 # GitHub
 
+## Template Repository
+
+We have a team template https://github.com/HHS/acf-datasurge-project-template. Use it as a starting point for each project's repository. 
+
 ## Repository Documentation
 
 Each repository should be documented with a README.md. The README.md should outline the purpose and scope of the project. The README.md should set forth repository-specific coding conventions (i.e. what are the languages and packages being used). These coding conventions should not conflict with organizational conventions for the languages used in the repository.

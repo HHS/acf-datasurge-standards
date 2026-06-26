@@ -1,3 +1,9 @@
+> [!WARNING]
+> **This repository has been archived and is no longer maintained.**
+> The code is provided for historical reference and may contain unpatched or unknown vulnerabilities.
+> It should not be used in production systems.
+> For more information, please contact <hhs_github_service_desk@hhs.gov>.
+
 # ACF Data Surge Coding Standards
 
 This guide covers essential topics such as directory structure, file naming conventions, best practices for GitHub usage, computational considerations, the choice between functional and object-oriented programming, the use of notebooks versus scripts (i.e., RMarkdown, Jupyter Notebooks, Quarto), and guidelines for commenting and code documentation. By adhering to these standards, we ensure consistency, readability, and maintainability across our projects, enabling us to effectively support ACF in managing data projects.

@@ -1,16 +1,21 @@
 # Python Standards
-- [Style Considerations](#style-considerations)
-  * [Presentation](#presentation)
-    + [Indentation](#indentation)
-    + [Using Line spaces - Sparse is better than dense](#using-line-spaces---sparse-is-better-than-dense)
-    + [Using White spaces](#using-white-spaces)
-  * [Naming](#naming)
-    + [Naming conventions](#naming-conventions)
-    + [Global variables and namespaces](#global-variables-and-namespaces)
-  * [Documentation](#documentation)
-    + [Docstrings](#docstrings)
-  * [Assertive Programming](#assertive-programming)
-- [Packages](#packages)
+- [Python Standards](#python-standards)
+  - [Style Considerations](#style-considerations)
+    - [Presentation](#presentation)
+      - [Indentation](#indentation)
+      - [Using Line spaces - Sparse is better than dense](#using-line-spaces---sparse-is-better-than-dense)
+      - [Using White spaces](#using-white-spaces)
+    - [Naming](#naming)
+      - [Naming conventions](#naming-conventions)
+      - [Global variables and namespaces](#global-variables-and-namespaces)
+    - [Documentation](#documentation)
+      - [Docstrings](#docstrings)
+      - [Comments](#comments)
+    - [Assertive Programming](#assertive-programming)
+  - [Packages](#packages)
+  - [Programming on VPN](#programming-on-vpn)
+    - [PyPI](#pypi)
+    - [HTTP Requests](#http-requests)
 
 ## Style Considerations
 Much of these considerations are adapted from the [PEP 8  Style Guide for Python](https://peps.python.org/pep-0008/])
@@ -173,5 +178,42 @@ def refund_client(refund_amount):
 - Visualization: [matplotlib](https://matplotlib.org/), [seaborn](https://seaborn.pydata.org/)
 - Dashboards: [Plotly/Dash](https://dash.plotly.com/) or [Streamlit](https://streamlit.io/) for a lightweight solution. [Flask](https://flask.palletsprojects.com/en/3.0.x/) for a fully customizable option.
 
+## Programming on VPN
 
+By default Python and attendant packages may not access the Windows Certificate Stores. This may lead to SSL verification errors when trying to access PyPI or make HTTP requests through Python while connected to VPN. Below are some tips that may help you remedy such SSL errors.
 
+### PyPI
+
+For connecting to PyPI while connected to VPN, these commands may be helpful:
+
+```{shell}
+py -m venv .venv // Create a virtual environment
+.venv\Scripts\activate // Activiate the virtual environmnet
+pip install truststore // Install the truststore package
+// Or check for the truststore package with pip show truststore
+pip config set global.use-feature truststore --site // To always use the truststore packages when installing packages
+```
+
+- [Reference](https://stackoverflow.com/questions/39356413/how-to-add-a-custom-ca-root-certificate-to-the-ca-store-used-by-pip-in-windows)
+
+### HTTP Requests
+
+If you are leveraging requests or similar packages to make HTTP requests to an API, you may be able to implement something similar to the below to make these requests while on VPN:
+
+```{python}
+import truststore
+import requests
+import ssl
+from requests.adapters import HTTPAdapter
+
+class TruststoreAdapter(HTTPAdapter):
+    def init_poolmanager(self, connections, maxsize, block=False):
+        ctx = truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+        return super().init_poolmanager(connections, maxsize, block, ssl_context=ctx)
+```
+
+The code is sourced directly from this [stackoverflow](https://stackoverflow.com/questions/78219802/use-truststores-sslcontext-with-python-requests-session-object) post. Examples of
+this code used practically include:
+
+- [Implementation](https://github.com/HHS/acf-genAI-rollout-tracker/blob/fix-journey/src/genai_rollout_tracker/utilities/request_utilities.py)
+- [Application](https://github.com/HHS/acf-genAI-rollout-tracker/blob/fix-journey/src/genai_rollout_tracker/percipio/percipio.py)
